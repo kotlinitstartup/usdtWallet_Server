@@ -23,7 +23,7 @@ app.use("/admin/", adminRouter);
 app.use("/users/", userRouter);
 app.use("/wallet/", walletRouter);
 app.use((req, res, next) => {
-  res.error();
+  res.status(404).send("Not found");
 });
 
 app.listen(3000, () => {
